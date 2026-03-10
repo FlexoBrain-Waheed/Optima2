@@ -1,15 +1,15 @@
 import streamlit as st
 
-# إعدادات الصفحة لتكون واسعة ومناسبة للعرض
+# Page Configuration
 st.set_page_config(page_title="Strategic Investment Evaluation", page_icon="📈", layout="wide")
 
-# شريحة الغلاف (العنوان الرئيسي)
+# Cover Slide (Main Title)
 st.title("Strategic Investment Evaluation")
 st.subheader("SOMA Optima 2 vs. W&H Alphaflex")
 st.markdown("**Presented by:** Flexo Consultation Services | Waheed Alkarraein")
 st.markdown("---")
 
-# إنشاء نظام التبويبات لتعمل كأنها "شرائح" العرض التقديمي
+# Tabs for the "Slides"
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "1. Market Positioning", 
     "2. Reliability", 
@@ -19,7 +19,7 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "6. The Challenge"
 ])
 
-# الشريحة الأولى
+# Slide 1
 with tab1:
     st.header("The Paradigm Shift: Flagship vs. Economy")
     st.info("**The Strategic Question:** Does it make sense to pay over €2 Million for a stripped-down economy model when you can own top-tier technology for the same budget?")
@@ -31,7 +31,7 @@ with tab1:
         st.warning("#### ⚠️ W&H Alphaflex (Economy Class)\n"
                    "Positioned as an 'Entry-Level' press. Stripped down to fit lower budgets.")
 
-# الشريحة الثانية
+# Slide 2
 with tab2:
     st.header("Proven Reliability vs. The Testing Ground")
     st.error("**Conclusion:** Never let your factory be the testing ground for a new economy model.")
@@ -40,7 +40,7 @@ with tab2:
     * **W&H Alphaflex:** Newly launched in mid-2024. Its economical structure is largely untested in harsh, long-term operational environments.
     """)
 
-# الشريحة الثالثة
+# Slide 3
 with tab3:
     st.header("Smart Engineering for Maximum Profit")
     st.markdown("""
@@ -49,7 +49,7 @@ with tab3:
     * **Zero Waste Guarantee:** SOMA's IRIS topography-based setup drastically reduces setup time and material waste compared to semi-automatic systems.
     """)
 
-# الشريحة الرابعة
+# Slide 4
 with tab4:
     st.header("Empowering Your Workforce (Operator Ergonomics)")
     st.success("**The Result:** SOMA dramatically reduces physical strain on operators, ensuring faster, safer, and much more efficient manual roll changes every single shift.")
@@ -61,7 +61,7 @@ with tab4:
         st.markdown("### ⚠️ W&H Alphaflex")
         st.markdown("Uses standard, **heavy mechanical shafts**.")
 
-# الشريحة الخامسة (الجدول المالي)
+# Slide 5
 with tab5:
     st.header("The Hidden Costs of 'Base' Offers")
     st.markdown("""
@@ -69,7 +69,6 @@ with tab5:
     The competitor's offer requires significant hidden additions to reach the same operational level.
     """)
     
-    # جدول المقارنة باستخدام Streamlit Markdown
     st.markdown("""
     | Feature / Equipment | SOMA Optima 2 (Turn-Key) | W&H Alphaflex (Base Offer) | Estimated Hidden Cost (If W&H is chosen) |
     | :--- | :--- | :--- | :--- |
@@ -79,8 +78,16 @@ with tab5:
     | **Payment Terms** | ✅ Flexible Wire Transfers | ❌ 75% Letter of Credit (L/C) | **Bank Fees + Tied-up Cash** |
     """)
 
-# الشريحة السادسة
+# Slide 6
 with tab6:
     st.header("A Complete Partnership & The SOMA Challenge")
     st.markdown("""
-    ### 🤝 Exclusive
+    ### 🤝 Exclusive Turn-Key Package
+    Special massive discount if investing in the complete suite (Press, S-Mount, Lamiflex, Pluto).
+    
+    ### 🎓 Unbeatable Training
+    **10 days** on-site + **2 extra weeks** later + **1 Full Month in Europe** at the SOMA factory for your team.
+    
+    ### 🚀 The SOMA Challenge
+    We invite you to our factory. Bring your most complex printing designs. Watch us set it up and print HD quality with near-zero waste in minutes. **Trust what you see, not just ink on paper.**
+    """)
