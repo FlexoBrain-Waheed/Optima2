@@ -521,10 +521,10 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
         with col1:
             st.markdown("### ⏱️ Time & Labor Efficiency")
             st.markdown("""
-            * **Manual Mounter:** Requires ~6 minutes per sleeve. (1,200 sleeves = **120 Hours/Month**). Demands 2 highly skilled, highly paid operators.
+            * **Manual Mounter:** Requires a minimum of 10 minutes per color. (1,200 sleeves = **200 Hours/Month**). Demands 2 highly skilled, highly paid operators.
             * **SOMA S-Mount (Auto):** Requires ~1.5 minutes per sleeve. (1,200 sleeves = **30 Hours/Month**). Requires only 1 standard operator (Push-button operation via IRIS).
             """)
-            df_time = pd.DataFrame({'System': ['Manual Mounter', 'SOMA S-Mount (Auto)'], 'Hours per Month': [120, 30]})
+            df_time = pd.DataFrame({'System': ['Manual Mounter', 'SOMA S-Mount (Auto)'], 'Hours per Month': [200, 30]})
             chart_time = alt.Chart(df_time).mark_bar(size=50).encode(
                 x=alt.X('System:N', title='', sort=None),
                 y=alt.Y('Hours per Month:Q', title='Mounting Time (Hours/Month)'),
@@ -550,7 +550,7 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
         st.markdown("""
         <div style="background-color: #EFF6FF; padding: 20px; border-radius: 8px; border-left: 6px solid #1E3A8A; margin-top: 20px;">
             <h3 style="color: #1E3A8A; margin-top:0;">💡 Executive Conclusion: The "Hidden" Profit Center</h3>
-            <p style="font-size: 1.1rem; color: #334155;">Investing in the fully automatic <b>SOMA S-Mount</b> is not just about buying a mounting machine; it is about reclaiming <b>90 hours of labor</b> and <b>€5,625 in press uptime</b> every single month. The machine pays for itself entirely within the first year through labor reduction and the absolute elimination of registration-based substrate waste.</p>
+            <p style="font-size: 1.1rem; color: #334155;">Investing in the fully automatic <b>SOMA S-Mount</b> is not just about buying a mounting machine; it is about reclaiming <b>170 hours of labor</b> and <b>€5,625 in press uptime</b> every single month. The machine pays for itself entirely within the first year through labor reduction and the absolute elimination of registration-based substrate waste.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -562,10 +562,10 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
         with col1:
             st.markdown("### ⏱️ كفاءة الوقت وتوفير العمالة")
             st.markdown("""
-            * **الماونتر اليدوي:** يستغرق حوالي 6 دقائق لتركيب السليف الواحد. (1,200 سليف = **120 ساعة عمل شهرياً**). ويتطلب فنيين اثنين بمهارة عالية جداً ورواتب مرتفعة.
+            * **الماونتر اليدوي:** يستغرق 10 دقائق كحد أدنى لتركيب كل لون. (1,200 سليف = **200 ساعة عمل شهرياً**). ويتطلب فنيين اثنين بمهارة عالية جداً ورواتب مرتفعة.
             * **SOMA S-Mount (أوتوماتيكي بالكامل):** يستغرق 1.5 دقيقة كحد أقصى. (1,200 سليف = **30 ساعة عمل شهرياً**). يحتاج لعامل واحد فقط بمهارة عادية (تعمل الماكينة بضغطة زر وتوجه الأسطوانات آلياً باستخدام نظام IRIS).
             """)
-            df_time = pd.DataFrame({'النظام': ['الماونتر اليدوي', 'SOMA S-Mount (أوتوماتيكي)'], 'ساعات العمل شهرياً': [120, 30]})
+            df_time = pd.DataFrame({'النظام': ['الماونتر اليدوي', 'SOMA S-Mount (أوتوماتيكي)'], 'ساعات العمل شهرياً': [200, 30]})
             chart_time = alt.Chart(df_time).mark_bar(size=50).encode(
                 x=alt.X('النظام:N', title='', sort=None),
                 y=alt.Y('ساعات العمل شهرياً:Q', title='الوقت المستغرق (ساعات/شهر)'),
@@ -591,6 +591,6 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
         st.markdown("""
         <div style="background-color: #EFF6FF; padding: 20px; border-radius: 8px; border-right: 6px solid #1E3A8A; margin-top: 20px;">
             <h3 style="color: #1E3A8A; margin-top:0;">💡 الخلاصة التنفيذية: صانع الأرباح الخفي</h3>
-            <p style="font-size: 1.2rem; color: #334155;">إن الاستثمار في الماونتر الأوتوماتيكي <b>SOMA S-Mount</b> ليس مجرد شراء معدة مساعدة؛ بل هو قرار إداري يضمن استرداد <b>90 ساعة عمل</b> مهدرة، وتوفير <b>5,625 يورو</b> من خسائر توقف المطبعة كل شهر. الماكينة تسدد قيمتها بالكامل (ROI) خلال عامها الأول من خلال تقليص العمالة والقضاء المطلق على هدر الخامات المرتبط بعدم تطابق الألوان.</p>
+            <p style="font-size: 1.2rem; color: #334155;">إن الاستثمار في الماونتر الأوتوماتيكي <b>SOMA S-Mount</b> ليس مجرد شراء معدة مساعدة؛ بل هو قرار إداري يضمن استرداد <b>170 ساعة عمل</b> مهدرة، وتوفير <b>5,625 يورو</b> من خسائر توقف المطبعة كل شهر. الماكينة تسدد قيمتها بالكامل (ROI) خلال عامها الأول من خلال تقليص العمالة والقضاء المطلق على هدر الخامات المرتبط بعدم تطابق الألوان.</p>
         </div>
         """, unsafe_allow_html=True)
