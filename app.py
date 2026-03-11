@@ -106,9 +106,9 @@ page_selection = st.sidebar.radio("Navigation / الفهرس:" if lang == "Engli
 
 st.sidebar.markdown("---")
 if lang == "English":
-    st.sidebar.markdown("**Prepared For:**\nYmtaco for Trading and Investment Ltd.\n\n**Prepared By:**\nWaheed Waleed Malik\nNexFlexo | SOMA Agent")
+    st.sidebar.markdown("**Prepared For:**\nYmtaco for Trading and Investment Ltd.\n\n**Prepared By:**\nWaheed Alkarraein\nNexFlexo | SOMA Agent")
 else:
-    st.sidebar.markdown("**تم الإعداد لصالح:**\nإدارة شركة Ymtaco للتجارة والاستثمار\n\n**إعداد التقرير:**\nوحيد وليد مالك\nNexFlexo | الوكيل المعتمد لشركة SOMA")
+    st.sidebar.markdown("**تم الإعداد لصالح:**\nإدارة شركة Ymtaco للتجارة والاستثمار\n\n**إعداد التقرير:**\nوحيد الكراعين\nNexFlexo | الوكيل المعتمد لشركة SOMA")
 
 # ==========================================
 # Page 1: Executive Summary
