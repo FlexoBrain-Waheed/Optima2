@@ -88,7 +88,8 @@ nav_options = {
         "5. Hidden Costs (TCO) 📊", 
         "6. Turn-Key Investment", 
         "7. Strategic Partnership 🚀",
-        "8. S-Mount ROI (Auto vs. Manual) 🤖"
+        "8. S-Mount ROI (Auto vs. Manual) 🤖",
+        "9. SOMA IRIS (Zero Waste Tech) 👁️"
     ],
     "العربية": [
         "1. الملخص التنفيذي", 
@@ -98,7 +99,8 @@ nav_options = {
         "5. التكاليف الخفية (TCO) 📊", 
         "6. استثمار المشروع المتكامل", 
         "7. شراكة التحدي والإثبات 🚀",
-        "8. دراسة جدوى الماونتر الأوتوماتيكي 🤖"
+        "8. دراسة جدوى الماونتر الأوتوماتيكي 🤖",
+        "9. تكنولوجيا SOMA IRIS (صفر هدر) 👁️"
     ]
 }
 
@@ -594,3 +596,111 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
             <p style="font-size: 1.2rem; color: #334155;">إن الاستثمار في الماونتر الأوتوماتيكي <b>SOMA S-Mount</b> ليس مجرد شراء معدة مساعدة؛ بل هو قرار إداري يضمن استرداد <b>170 ساعة عمل</b> مهدرة، وتوفير <b>5,625 يورو</b> من خسائر توقف المطبعة كل شهر. الماكينة تسدد قيمتها بالكامل (ROI) خلال عامها الأول من خلال تقليص العمالة والقضاء المطلق على هدر الخامات المرتبط بعدم تطابق الألوان.</p>
         </div>
         """, unsafe_allow_html=True)
+
+# ==========================================
+# Page 9: SOMA IRIS (Zero Waste Tech)
+# ==========================================
+elif page_selection in ["9. SOMA IRIS (Zero Waste Tech) 👁️", "9. تكنولوجيا SOMA IRIS (صفر هدر) 👁️"]:
+    if lang == "English":
+        st.markdown('<div class="executive-title">9. SOMA IRIS Tech: Absolute Zero-Waste Setup</div>', unsafe_allow_html=True)
+        st.markdown("""The **IRIS (Intelligent Register and Impression Setting)** is SOMA’s pinnacle innovation. It performs a 3D laser topographic scan of the plate's surface during the offline mounting phase. This exact topographic landscape is sent to the press to fully automate impression and register settings with near-zero waste.""")
+        
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 Technical Superiority: SOMA IRIS vs. Competitor Systems (e.g., BOBST smartGPS)</h3>', unsafe_allow_html=True)
+        st.markdown("""
+        <table class="corp-table">
+            <tr>
+                <th>Comparison Parameter</th>
+                <th>SOMA IRIS (Topography Mapping)</th>
+                <th>Traditional / Competitor Systems (e.g., smartGPS)</th>
+            </tr>
+            <tr>
+                <td><strong>Measurement Mechanism</strong></td>
+                <td class="highlight-adv">Full 3D Laser Topographic scan of the actual plate landscape</td>
+                <td class="highlight-dis">Reads specific micro-dots or relies heavily on embedded RFID chips</td>
+            </tr>
+            <tr>
+                <td><strong>Pre-Press Quality Control</strong></td>
+                <td class="highlight-adv">Generates a full TIR (Total Indicator Reading) report before printing</td>
+                <td class="highlight-dis">Lacks detailed 3D deformation mapping of the mounted plate</td>
+            </tr>
+            <tr>
+                <td><strong>Operational Lock-in (OPEX)</strong></td>
+                <td class="highlight-adv">Open system architecture; no mandatory overpriced proprietary sleeves</td>
+                <td class="highlight-dis">Often requires proprietary, highly expensive smart sleeves</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
+        
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 30px;">📊 Direct Financial ROI of SOMA IRIS (Based on 150 Jobs/Month)</h3>', unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric(label="Setup Waste per Job (Traditional)", value="~ 200 Meters")
+        with col2:
+            st.metric(label="Setup Waste with SOMA IRIS", value="~ 10 Meters", delta="-190 Meters Saved", delta_color="normal")
+        with col3:
+            st.metric(label="Monthly Substrate Saved (150 Jobs)", value="28,500 Meters", delta="Pure Profit", delta_color="normal")
+            
+        df_waste = pd.DataFrame({
+            'System': ['Traditional Camera Setup', 'SOMA IRIS (Topography)'],
+            'Monthly Waste (Meters)': [30000, 1500]
+        })
+        chart_waste = alt.Chart(df_waste).mark_bar(size=60, cornerRadiusEnd=5).encode(
+            x=alt.X('System:N', title='', sort=None),
+            y=alt.Y('Monthly Waste (Meters):Q', title='Total Substrate Wasted Monthly (Meters)'),
+            color=alt.condition(alt.datum.System == 'SOMA IRIS (Topography)', alt.value('#059669'), alt.value('#DC2626'))
+        ).properties(height=300, title="Monthly Substrate Waste Comparison (150 Jobs)")
+        st.altair_chart(chart_waste, use_container_width=True)
+
+        st.info("💡 **Executive Takeaway:** IRIS is not just a register system; it is a financial safeguard. It ensures that virtually every meter of substrate fed into the press is sellable product, utterly obliterating the 'setup waste' budget line.")
+
+    else:
+        st.markdown('<div class="executive-title">9. تكنولوجيا SOMA IRIS: القضاء التام على هدر التجهيز</div>', unsafe_allow_html=True)
+        st.markdown("""نظام **IRIS (Intelligent Register and Impression Setting)** هو قمة الابتكار في أنظمة SOMA. يقوم النظام بعمل مسح طوبوغرافي (3D) ثلاثي الأبعاد لسطح الكليشيه (الطباعة) باستخدام الليزر أثناء مرحلة المونتاج (Offline)، ويرسل البيانات مباشرة إلى المطبعة لضبط المسافات والضغوط أوتوماتيكياً بصفر هدر.""")
+        
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 التفوق التكنولوجي: SOMA IRIS مقابل الأنظمة المنافسة (مثل BOBST smartGPS)</h3>', unsafe_allow_html=True)
+        st.markdown("""
+        <table class="corp-table">
+            <tr>
+                <th>وجه المقارنة</th>
+                <th>SOMA IRIS (مسح طوبوغرافي)</th>
+                <th>الأنظمة المنافسة (مثل smartGPS / التقليدية)</th>
+            </tr>
+            <tr>
+                <td><strong>آلية أخذ القراءات</strong></td>
+                <td class="highlight-adv">مسح ليزري طوبوغرافي (3D) لتضاريس الكليشيه بالكامل</td>
+                <td class="highlight-dis">قراءة نقاط محددة (Marks) أو الاعتماد على رقاقات RFID فقط</td>
+            </tr>
+            <tr>
+                <td><strong>تقييم الجودة المسبق (TIR)</strong></td>
+                <td class="highlight-adv">يقدم تقرير جودة كامل (TIR) قبل ذهاب السليف للمطبعة</td>
+                <td class="highlight-dis">لا يقدم تقرير تضاريس مفصل للتشوهات الدقيقة</td>
+            </tr>
+            <tr>
+                <td><strong>الاحتكار التشغيلي (OPEX)</strong></td>
+                <td class="highlight-adv">نظام مفتوح، لا يجبرك على شراء سليفات بأسعار خيالية</td>
+                <td class="highlight-dis">يتطلب أحياناً سليفات خاصة مدمجة بشرائح ذكية (مكلفة جداً)</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
+        
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 30px;">📊 العائد المالي المباشر من تطبيق نظام IRIS (مبني على 150 طلبية شهرياً)</h3>', unsafe_allow_html=True)
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric(label="هدر الخامات (للطبلية الواحدة) بالأنظمة التقليدية", value="~ 200 متر")
+        with col2:
+            st.metric(label="هدر الخامات مع نظام SOMA IRIS", value="~ 10 أمتار", delta="-190 متر توفير", delta_color="normal")
+        with col3:
+            st.metric(label="التوفير الشهري (150 طلبية)", value="28,500 متر", delta="أرباح صافية", delta_color="normal")
+            
+        df_waste = pd.DataFrame({
+            'النظام': ['الضبط التقليدي / الكاميرات', 'نظام SOMA IRIS (مسح طوبوغرافي)'],
+            'هدر الخامات شهرياً (متر)': [30000, 1500]
+        })
+        chart_waste = alt.Chart(df_waste).mark_bar(size=60, cornerRadiusEnd=5).encode(
+            x=alt.X('النظام:N', title='', sort=None),
+            y=alt.Y('هدر الخامات شهرياً (متر):Q', title='إجمالي الأمتار المهدرة شهرياً'),
+            color=alt.condition(alt.datum.النظام == 'نظام SOMA IRIS (مسح طوبوغرافي)', alt.value('#059669'), alt.value('#DC2626'))
+        ).properties(height=300, title="مقارنة الهدر الشهري في الخامات (بناءً على 150 طلبية)")
+        st.altair_chart(chart_waste, use_container_width=True)
+
+        st.info("💡 **الخلاصة التنفيذية:** نظام IRIS لا يقوم فقط بضبط الألوان؛ بل هو حارس مالي يضمن أن كل متر من الخامات يدخل المطبعة يتم بيعه للعميل كمنتج نهائي، مما يلغي تماماً ميزانية (الهدر التشغيلي) ويضاعف هوامش الربح.")
