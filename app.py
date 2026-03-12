@@ -272,17 +272,33 @@ elif page_selection in ["3. Operational Efficiency & ROI ♻️", "3. كفاءة
         st.info("💡 **Strategic Advantage (Open Source vs. Black Box):** SOMA’s Inkstorm is highly customizable. Operators can tweak wash parameters exactly to the ink chemistry, eliminating the forced solvent over-consumption typical of closed competitor systems.")
         
         st.markdown('<h3 style="color: #1E3A8A; margin-top: 30px;">🎨 SOMA Ink Cartridge System: The Short-Run Profit Enabler</h3>', unsafe_allow_html=True)
-        st.markdown("""
-        <div class="data-card-soma">
-            <p style="font-size: 1.1rem;">A revolutionary system engineered specifically for highly profitable short runs and expensive special effect/metallic colours.</p>
-            <ul style="line-height: 1.8;">
-                <li><b>Micro-Volume Operation:</b> Requires a maximum of only <b>4.5 Liters</b> to run full production.</li>
-                <li><b>Elimination of Residual Waste:</b> Completely bypasses the massive ink loss hidden in long hoses and large buckets of standard systems.</li>
-                <li><b>Smart Integration:</b> Optionally available with inline automatic viscosity control, stirrer, and level sensor for zero-defect printing.</li>
-                <li><b>Financial Impact (ROI):</b> Saves tens of thousands of Euros annually on wasted spot colours, allowing you to offer competitive pricing on premium packaging.</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+        
+        col_text, col_chart = st.columns([1.2, 1])
+        with col_text:
+            st.markdown("""
+            <div class="data-card-soma">
+                <p style="font-size: 1.1rem;">A revolutionary system engineered specifically for highly profitable short runs and expensive special effect/metallic colours.</p>
+                <ul style="line-height: 1.8;">
+                    <li><b>Micro-Volume Operation:</b> Requires a maximum of only <b>4.5 Liters</b> to run full production.</li>
+                    <li><b>15cm Direct Connection:</b> Features ultra-short 15cm hoses connecting directly to the Doctor Blade Chamber (DBC), ensuring <b>almost zero residual ink waste</b> when changing jobs or washing spot colors.</li>
+                    <li><b>Maximum Profitability on Premium Inks:</b> Delivers the highest ROI when printing extremely expensive spot colors like gold, silver, and metallics.</li>
+                    <li><b>Smart Integration:</b> Optionally available with inline automatic viscosity control, stirrer, and level sensor for zero-defect printing.</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_chart:
+            df_ink = pd.DataFrame({
+                'System': ['Standard System (Long Hoses)', 'SOMA Ink Cartridge (15cm)'],
+                'Residual Ink Waste (Liters/Job)': [3.5, 0.2]
+            })
+            chart_ink = alt.Chart(df_ink).mark_bar(size=40).encode(
+                x=alt.X('Residual Ink Waste (Liters/Job):Q', title='Residual Ink Wasted per Job (Liters)'),
+                y=alt.Y('System:N', sort='-x', title=''),
+                color=alt.condition(alt.datum.System == 'SOMA Ink Cartridge (15cm)', alt.value('#059669'), alt.value('#DC2626')),
+                tooltip=['System', 'Residual Ink Waste (Liters/Job)']
+            ).properties(height=250, title="Residual Ink Waste (Per Spot Color Change)")
+            st.altair_chart(chart_ink, use_container_width=True)
 
     else:
         st.markdown('<div class="executive-title">3. كفاءة التشغيل اليومية وعائد الاستثمار للمواد الاستهلاكية</div>', unsafe_allow_html=True)
@@ -336,17 +352,33 @@ elif page_selection in ["3. Operational Efficiency & ROI ♻️", "3. كفاءة
         st.info("💡 **الميزة الاستراتيجية (المرونة مقابل الاحتكار):** نظام SOMA مفتوح وقابل للتخصيص المطلق (Open-sourced). يمكن للمشغلين ضبط معايير الغسيل بدقة لتناسب نوع الحبر، مما يمنع الهدر الإجباري للمذيبات الموجود في الأنظمة المغلقة والمقيدة للمنافسين.")
 
         st.markdown('<h3 style="color: #1E3A8A; margin-top: 30px;">🎨 نظام خراطيش الحبر (Ink Cartridge): صانع أرباح الطلبيات القصيرة</h3>', unsafe_allow_html=True)
-        st.markdown("""
-        <div class="data-card-soma">
-            <p style="font-size: 1.2rem; color: #0F172A;">نظام ثوري مصمم خصيصاً لتعظيم أرباح الطلبيات القصيرة (Short Runs) والألوان الخاصة والمعدنية باهظة الثمن.</p>
-            <ul style="line-height: 1.8; font-size: 1.1rem; color: #334155;">
-                <li><b>التشغيل بالكميات الدقيقة:</b> يتطلب <b>4.5 لتر فقط</b> كحد أقصى لتشغيل وحدة الطباعة بكفاءة تامة.</li>
-                <li><b>القضاء على الهدر المخفي:</b> يتجاوز تماماً مشكلة فقدان الحبر داخل الخراطيم الطويلة والمضخات الكبيرة في الأنظمة التقليدية.</li>
-                <li><b>تكامل ذكي:</b> يأتي مزوداً بنظام تحكم آلي باللزوجة (Viscosity)، خلاط، وحساس لمستوى الحبر لضمان طباعة خالية من العيوب.</li>
-                <li><b>الأثر المالي (ROI):</b> يوفر عشرات الآلاف من الريالات سنوياً من قيمة الأحبار الخاصة المهدرة، مما يمنحكم مرونة في تقديم أسعار تنافسية للعملاء.</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+        
+        col_text, col_chart = st.columns([1.2, 1])
+        with col_text:
+            st.markdown("""
+            <div class="data-card-soma">
+                <p style="font-size: 1.2rem; color: #0F172A;">نظام ثوري مصمم خصيصاً لتعظيم أرباح الطلبيات القصيرة (Short Runs) والألوان الخاصة والمعدنية باهظة الثمن.</p>
+                <ul style="line-height: 1.8; font-size: 1.1rem; color: #334155;">
+                    <li><b>التشغيل بالكميات الدقيقة:</b> يتطلب <b>4.5 لتر فقط</b> كحد أقصى لتشغيل وحدة الطباعة بكفاءة تامة.</li>
+                    <li><b>اتصال مباشر بـ 15 سم فقط:</b> يتميز النظام بخراطيم قصيرة جداً (15 سم) متصلة مباشرة بغرفة الشفرات (DBC)، مما يضمن <b>هدر شبه صفري (Zero Residual)</b> للحبر المتبقي عند تغيير الطلبيات أو غسيل الألوان الخاصة.</li>
+                    <li><b>أرباح مضاعفة للأحبار الثمينة:</b> يحقق النظام أعلى جدوى اقتصادية (ROI) عند طباعة الألوان الخاصة باهظة الثمن مثل الذهبي، الفضي، والألوان المعدنية (Metallic).</li>
+                    <li><b>تكامل ذكي:</b> يأتي مزوداً بنظام تحكم آلي باللزوجة (Viscosity)، خلاط، وحساس لمستوى الحبر لضمان طباعة خالية من العيوب.</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+            
+        with col_chart:
+            df_ink_ar = pd.DataFrame({
+                'النظام': ['الأنظمة القياسية (خراطيم طويلة)', 'نظام SOMA خراطيش (خراطيم 15 سم)'],
+                'الحبر المتبقي المهدر (لتر)': [3.5, 0.2]
+            })
+            chart_ink_ar = alt.Chart(df_ink_ar).mark_bar(size=40).encode(
+                x=alt.X('الحبر المتبقي المهدر (لتر):Q', title='كمية الحبر المهدرة لكل تغيير (لتر)'),
+                y=alt.Y('النظام:N', sort='-x', title=''),
+                color=alt.condition(alt.datum.النظام == 'نظام SOMA خراطيش (خراطيم 15 سم)', alt.value('#059669'), alt.value('#DC2626')),
+                tooltip=['النظام', 'الحبر المتبقي المهدر (لتر)']
+            ).properties(height=250, title="مقارنة هدر الحبر المتبقي (عند كل تغيير للون خاص)")
+            st.altair_chart(chart_ink_ar, use_container_width=True)
 
 # ==========================================
 # Page 4: Long-Term Opex & Service
