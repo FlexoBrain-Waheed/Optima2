@@ -167,54 +167,87 @@ if page_selection in ["1. Executive Summary", "1. الملخص التنفيذي"
 elif page_selection in ["2. Structural & Engineering Superiority", "2. التفوق الهيكلي والهندسي"]:
     if lang == "English":
         st.markdown('<div class="executive-title">2. Structural Integrity & Engineering Superiority</div>', unsafe_allow_html=True)
-        st.markdown("""A machine's lifespan and print quality (HD) are directly determined by its core structural rigidity.""")
+        st.markdown("""A machine's lifespan and print quality (HD) are directly determined by its core structural rigidity and intelligent operator-centric design.""")
         
-        st.subheader("Machine Frame Wall Thickness (Resonance Elimination)")
-        frame_data = pd.DataFrame({
-            'Machine': ['SOMA Optima 2 (Double Wall)', 'W&H Alphaflex'],
-            'Thickness (mm)': [130, 60]
-        })
-        chart1 = alt.Chart(frame_data).mark_bar(size=60).encode(
-            x=alt.X('Machine:N', title=''),
-            y=alt.Y('Thickness (mm):Q', title='Frame Thickness in Millimeters'),
-            color=alt.condition(alt.datum.Machine == 'SOMA Optima 2 (Double Wall)', alt.value('#059669'), alt.value('#DC2626'))
-        ).properties(height=300)
-        st.altair_chart(chart1, use_container_width=True)
-
         st.markdown("""
         <table class="corp-table">
             <tr><th>Engineering Specification</th><th>SOMA Optima 2</th><th>W&H Alphaflex</th><th>Operational Impact</th></tr>
             <tr><td><strong>Machine Frame Thickness</strong></td><td class="highlight-adv">130 mm (Doubled)</td><td class="highlight-dis">~ 55 - 60 mm</td><td>Massive difference in long-term stability and elimination of bouncing at high speeds.</td></tr>
+            <tr><td><strong>Process Visibility (Print Decks)</strong></td><td class="highlight-adv">Transparent Glass Windows</td><td class="highlight-dis">Closed (No Glass)</td><td>SOMA provides full visual control over the print process at all times, preventing unnoticed defects.</td></tr>
             <tr><td><strong>Operator Ergonomics (Height)</strong></td><td class="highlight-adv">Accessible from floor</td><td class="highlight-dis">Too High</td><td>Optima 2 allows operators to touch the highest printing deck and change sleeves easily without ladders.</td></tr>
             <tr><td><strong>Printing Cylinder Mandrels</strong></td><td class="highlight-adv">Carbon Composite</td><td class="highlight-dis">Standard Steel</td><td>Carbon absorbs vibrations, ensuring perfect HD dot reproduction.</td></tr>
             <tr><td><strong>Pre-Shipment Testing</strong></td><td class="highlight-adv">Full F.A.T. Performed</td><td class="highlight-dis">Not Standard</td><td>SOMA performs full Factory Acceptance Tests before shipment to guarantee zero installation surprises.</td></tr>
         </table>
         """, unsafe_allow_html=True)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown('<h4 style="color: #1E3A8A; text-align: center;">⚙️ Frame Wall Thickness (Resonance Elimination)</h4>', unsafe_allow_html=True)
+            frame_data = pd.DataFrame({'Machine': ['SOMA Optima 2', 'W&H Alphaflex'], 'Thickness (mm)': [130, 60]})
+            chart1 = alt.Chart(frame_data).mark_bar(size=50).encode(
+                x=alt.X('Machine:N', title='', sort=None),
+                y=alt.Y('Thickness (mm):Q', title='Frame Thickness (mm)'),
+                color=alt.condition(alt.datum.Machine == 'SOMA Optima 2', alt.value('#059669'), alt.value('#DC2626'))
+            ).properties(height=300)
+            st.altair_chart(chart1, use_container_width=True)
+
+        with col2:
+            st.markdown('<h4 style="color: #1E3A8A; text-align: center;">👁️ Operator Ergonomics & Visibility Index</h4>', unsafe_allow_html=True)
+            df_ergo = pd.DataFrame({
+                'Feature': ['Process Visibility (Glass)', 'Deck Accessibility (Floor)', 'Ergonomics (Shaft Weight)', 'Process Visibility (Glass)', 'Deck Accessibility (Floor)', 'Ergonomics (Shaft Weight)'],
+                'Machine': ['SOMA Optima 2', 'SOMA Optima 2', 'SOMA Optima 2', 'W&H Alphaflex', 'W&H Alphaflex', 'W&H Alphaflex'],
+                'Efficiency Score (%)': [100, 100, 95, 0, 30, 40]
+            })
+            chart_ergo = alt.Chart(df_ergo).mark_bar().encode(
+                x=alt.X('Feature:N', title='', sort=None, axis=alt.Axis(labelAngle=0)),
+                y=alt.Y('Efficiency Score (%):Q', title='Efficiency & Control Score (%)'),
+                xOffset='Machine:N',
+                color=alt.Color('Machine:N', scale=alt.Scale(domain=['SOMA Optima 2', 'W&H Alphaflex'], range=['#059669', '#DC2626']), legend=alt.Legend(orient='bottom')),
+                tooltip=['Machine', 'Feature', 'Efficiency Score (%)']
+            ).properties(height=300)
+            st.altair_chart(chart_ergo, use_container_width=True)
+
     else:
         st.markdown('<div class="executive-title">2. التفوق الهيكلي والصلابة الهندسية</div>', unsafe_allow_html=True)
-        st.markdown("""العمر الافتراضي للماكينة وجودة الطباعة الدقيقة (HD) يعتمدان بشكل مباشر على الصلابة الهيكلية والميكانيكية للماكينة.""")
+        st.markdown("""العمر الافتراضي للماكينة وجودة الطباعة الدقيقة (HD) يعتمدان بشكل مباشر على الصلابة الهيكلية للميكانيكا، بالإضافة إلى التصميم الذكي الذي يركز على تحكم المشغل.""")
         
-        st.subheader("مقارنة سماكة الهيكل المعدني (القدرة على امتصاص الاهتزازات)")
-        frame_data = pd.DataFrame({
-            'الماكينة': ['SOMA Optima 2 (جدار مزدوج)', 'W&H Alphaflex'],
-            'السماكة (ملم)': [130, 60]
-        })
-        chart1 = alt.Chart(frame_data).mark_bar(size=60).encode(
-            x=alt.X('الماكينة:N', title='', sort=None),
-            y=alt.Y('السماكة (ملم):Q', title='سماكة الهيكل بالمليمتر'),
-            color=alt.condition(alt.datum.الماكينة == 'SOMA Optima 2 (جدار مزدوج)', alt.value('#059669'), alt.value('#DC2626'))
-        ).properties(height=300)
-        st.altair_chart(chart1, use_container_width=True)
-
         st.markdown("""
         <table class="corp-table">
             <tr><th>المواصفات الهندسية</th><th>SOMA Optima 2</th><th>W&H Alphaflex</th><th>التأثير التشغيلي</th></tr>
             <tr><td><strong>سماكة جدار الماكينة (Frame)</strong></td><td class="highlight-adv">130 ملم (مزدوج)</td><td class="highlight-dis">~ 55 - 60 ملم</td><td>فارق هائل في الاستقرار طويل الأمد والقضاء التام على الاهتزاز (Bouncing).</td></tr>
+            <tr><td><strong>الرؤية ومراقبة سير الطباعة</strong></td><td class="highlight-adv">نوافذ زجاجية شفافة</td><td class="highlight-dis">وحدات مغلقة (بدون زجاج)</td><td>SOMA تتيح رؤية ومراقبة عملية الطباعة لحظياً، مما يمنع حدوث وتفاقم عيوب الطباعة غير المرئية.</td></tr>
             <tr><td><strong>بيئة العمل (ارتفاع الماكينة)</strong></td><td class="highlight-adv">في متناول اليد من الأرض</td><td class="highlight-dis">مرتفعة جداً</td><td>تصميم SOMA يتيح للطباع الوصول لأعلى وحدة طباعة وتغيير السليفات بسهولة تامة من مستوى الأرض.</td></tr>
             <tr><td><strong>أعمدة أسطوانات الطباعة</strong></td><td class="highlight-adv">كاربون فايبر</td><td class="highlight-dis">حديد عادي</td><td>الكاربون يمتص الاهتزازات تماماً لضمان جودة HD.</td></tr>
             <tr><td><strong>اختبارات ما قبل الشحن</strong></td><td class="highlight-adv">شاملة (F.A.T)</td><td class="highlight-dis">غير قياسية</td><td>SOMA هي الوحيدة التي تقوم بتشغيل واختبار الماكينة بالكامل (FAT) قبل الشحن لضمان عدم وجود أي مفاجآت عند التركيب.</td></tr>
         </table>
         """, unsafe_allow_html=True)
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown('<h4 style="color: #1E3A8A; text-align: center;">⚙️ سماكة الهيكل المعدني (القدرة على كبح الاهتزاز)</h4>', unsafe_allow_html=True)
+            frame_data = pd.DataFrame({'الماكينة': ['SOMA Optima 2', 'W&H Alphaflex'], 'السماكة (ملم)': [130, 60]})
+            chart1 = alt.Chart(frame_data).mark_bar(size=50).encode(
+                x=alt.X('الماكينة:N', title='', sort=None),
+                y=alt.Y('السماكة (ملم):Q', title='سماكة الهيكل بالمليمتر'),
+                color=alt.condition(alt.datum.الماكينة == 'SOMA Optima 2', alt.value('#059669'), alt.value('#DC2626'))
+            ).properties(height=300)
+            st.altair_chart(chart1, use_container_width=True)
+
+        with col2:
+            st.markdown('<h4 style="color: #1E3A8A; text-align: center;">👁️ مؤشر بيئة العمل وتحكم المشغل (Ergonomics & Control)</h4>', unsafe_allow_html=True)
+            df_ergo = pd.DataFrame({
+                'المعيار': ['رؤية الطباعة (زجاج)', 'الوصول للسليفات (أرضي)', 'الجهد البدني (وزن الشافت)', 'رؤية الطباعة (زجاج)', 'الوصول للسليفات (أرضي)', 'الجهد البدني (وزن الشافت)'],
+                'الماكينة': ['SOMA Optima 2', 'SOMA Optima 2', 'SOMA Optima 2', 'W&H Alphaflex', 'W&H Alphaflex', 'W&H Alphaflex'],
+                'نسبة الكفاءة (%)': [100, 100, 95, 0, 30, 40]
+            })
+            chart_ergo = alt.Chart(df_ergo).mark_bar().encode(
+                x=alt.X('المعيار:N', title='', sort=None, axis=alt.Axis(labelAngle=0)),
+                y=alt.Y('نسبة الكفاءة (%):Q', title='مؤشر الكفاءة والأمان (%)'),
+                xOffset='الماكينة:N',
+                color=alt.Color('الماكينة:N', scale=alt.Scale(domain=['SOMA Optima 2', 'W&H Alphaflex'], range=['#059669', '#DC2626']), legend=alt.Legend(orient='bottom', title='')),
+                tooltip=['الماكينة', 'المعيار', 'نسبة الكفاءة (%)']
+            ).properties(height=300)
+            st.altair_chart(chart_ergo, use_container_width=True)
 
 # ==========================================
 # Page 3: Operational Efficiency (Wash-up & Ink) 
