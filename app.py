@@ -676,7 +676,7 @@ elif page_selection in ["9. SOMA IRIS (Zero Waste Tech) 👁️", "9. تكنول
             <tr>
                 <th>Comparison Parameter</th>
                 <th>SOMA IRIS (Tactile Topography)</th>
-                <th>Traditional / Competitor Systems (e.g., smartGPS)</th>
+                <th>Traditional / Competitor Systems</th>
             </tr>
             <tr>
                 <td><strong>Measurement Mechanism</strong></td>
@@ -728,7 +728,7 @@ elif page_selection in ["9. SOMA IRIS (Zero Waste Tech) 👁️", "9. تكنول
             <tr>
                 <th>وجه المقارنة</th>
                 <th>SOMA IRIS (قراءة مادية لمسية)</th>
-                <th>الأنظمة المنافسة (مثل smartGPS / التقليدية)</th>
+                <th>الأنظمة المنافسة / التقليدية</th>
             </tr>
             <tr>
                 <td><strong>آلية أخذ القراءات</strong></td>
