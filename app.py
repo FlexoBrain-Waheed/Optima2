@@ -668,30 +668,30 @@ elif page_selection in ["8. S-Mount ROI (Auto vs. Manual) 🤖", "8. دراسة 
 elif page_selection in ["9. SOMA IRIS (Zero Waste Tech) 👁️", "9. تكنولوجيا SOMA IRIS (صفر هدر) 👁️"]:
     if lang == "English":
         st.markdown('<div class="executive-title">9. SOMA IRIS Tech: Absolute Zero-Waste Setup</div>', unsafe_allow_html=True)
-        st.markdown("""The **IRIS (Intelligent Register and Impression Setting)** is SOMA’s pinnacle innovation. It performs a 3D laser topographic scan of the plate's surface during the offline mounting phase. This exact topographic landscape is sent to the press to fully automate impression and register settings with near-zero waste.""")
+        st.markdown("""The **IRIS (Intelligent Register and Impression Setting)** is SOMA’s pinnacle innovation. Instead of relying on optical guesswork, it utilizes **ultra-sensitive mechanical contact sensors (pedals)** to perform an exact physical topographic scan of the plate's surface during the offline mounting phase. This tactile mapping identifies the highest and lowest points with micron-level precision and is sent directly to the press to fully automate impression and register settings with near-zero waste.""")
         
-        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 Technical Superiority: SOMA IRIS vs. Competitor Systems (e.g., BOBST smartGPS)</h3>', unsafe_allow_html=True)
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 Technical Superiority: Physical Truth vs. Optical Estimation</h3>', unsafe_allow_html=True)
         st.markdown("""
         <table class="corp-table">
             <tr>
                 <th>Comparison Parameter</th>
-                <th>SOMA IRIS (Topography Mapping)</th>
+                <th>SOMA IRIS (Tactile Topography)</th>
                 <th>Traditional / Competitor Systems (e.g., smartGPS)</th>
             </tr>
             <tr>
                 <td><strong>Measurement Mechanism</strong></td>
-                <td class="highlight-adv">Full 3D Laser Topographic scan of the actual plate landscape</td>
+                <td class="highlight-adv">Ultra-sensitive tactile sensors map the exact physical topography of the plate</td>
                 <td class="highlight-dis">Reads specific micro-dots or relies heavily on embedded RFID chips</td>
             </tr>
             <tr>
-                <td><strong>Pre-Press Quality Control</strong></td>
-                <td class="highlight-adv">Generates a full TIR (Total Indicator Reading) report before printing</td>
-                <td class="highlight-dis">Lacks detailed 3D deformation mapping of the mounted plate</td>
+                <td><strong>Pre-Press Quality Control & Error Detection</strong></td>
+                <td class="highlight-adv">Actively detects plate errors (dirt, damage, uneven sleeves) and generates a TIR report <i>before</i> printing</td>
+                <td class="highlight-dis">Lacks detailed physical deformation mapping of the mounted plate</td>
             </tr>
             <tr>
-                <td><strong>Operational Lock-in (OPEX)</strong></td>
-                <td class="highlight-adv">Open system architecture; no mandatory overpriced proprietary sleeves</td>
-                <td class="highlight-dis">Often requires proprietary, highly expensive smart sleeves</td>
+                <td><strong>Future-Proof Architecture</strong></td>
+                <td class="highlight-adv">"Future-Ready": Upgradeable to the upcoming 2027 Digital Proofing (Laser Scanning) technology</td>
+                <td class="highlight-dis">Closed architecture requiring complete machine replacement for next-gen features</td>
             </tr>
         </table>
         """, unsafe_allow_html=True)
@@ -720,30 +720,30 @@ elif page_selection in ["9. SOMA IRIS (Zero Waste Tech) 👁️", "9. تكنول
 
     else:
         st.markdown('<div class="executive-title">9. تكنولوجيا SOMA IRIS: القضاء التام على هدر التجهيز</div>', unsafe_allow_html=True)
-        st.markdown("""نظام **IRIS (Intelligent Register and Impression Setting)** هو قمة الابتكار في أنظمة SOMA. يقوم النظام بعمل مسح طوبوغرافي (3D) ثلاثي الأبعاد لسطح الكليشيه (الطباعة) باستخدام الليزر أثناء مرحلة المونتاج (Offline)، ويرسل البيانات مباشرة إلى المطبعة لضبط المسافات والضغوط أوتوماتيكياً بصفر هدر.""")
+        st.markdown("""نظام **IRIS (Intelligent Register and Impression Setting)** هو قمة الابتكار في أنظمة SOMA. بدلاً من التخمين البصري، يعتمد النظام على **مستشعرات لمسية (Pedals) فائقة الحساسية** لعمل مسح طوبوغرافي مادي دقيق لتضاريس الكليشيه أثناء مرحلة المونتاج (Offline). تقوم هذه المستشعرات بتحديد أعلى وأقل النقاط بدقة الميكرون، وتكتشف أي عيوب (أوساخ أو تلف بالكليشيه)، ثم ترسل الخريطة مباشرة للمطبعة لضبط الضغوط آلياً بصفر هدر.""")
         
-        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 التفوق التكنولوجي: SOMA IRIS مقابل الأنظمة المنافسة (مثل BOBST smartGPS)</h3>', unsafe_allow_html=True)
+        st.markdown('<h3 style="color: #1E3A8A; margin-top: 20px;">🔍 التفوق التكنولوجي: القراءة المادية الفعلية مقابل التخمين البصري</h3>', unsafe_allow_html=True)
         st.markdown("""
         <table class="corp-table">
             <tr>
                 <th>وجه المقارنة</th>
-                <th>SOMA IRIS (مسح طوبوغرافي)</th>
+                <th>SOMA IRIS (قراءة مادية لمسية)</th>
                 <th>الأنظمة المنافسة (مثل smartGPS / التقليدية)</th>
             </tr>
             <tr>
                 <td><strong>آلية أخذ القراءات</strong></td>
-                <td class="highlight-adv">مسح ليزري طوبوغرافي (3D) لتضاريس الكليشيه بالكامل</td>
-                <td class="highlight-dis">قراءة نقاط محددة (Marks) أو الاعتماد على رقاقات RFID فقط</td>
+                <td class="highlight-adv">قراءة طوبوغرافية لمسية فائقة الدقة لتضاريس الكليشيه الفعلية (أعلى وأقل النقاط)</td>
+                <td class="highlight-dis">قراءة بصرية لنقاط محددة أو الاعتماد على رقاقات RFID فقط</td>
             </tr>
             <tr>
-                <td><strong>تقييم الجودة المسبق (TIR)</strong></td>
-                <td class="highlight-adv">يقدم تقرير جودة كامل (TIR) قبل ذهاب السليف للمطبعة</td>
-                <td class="highlight-dis">لا يقدم تقرير تضاريس مفصل للتشوهات الدقيقة</td>
+                <td><strong>تقييم الجودة واكتشاف العيوب</strong></td>
+                <td class="highlight-adv">كشف استباقي للعيوب (أوساخ، كليشيه تالف) مع تقرير TIR شامل قبل الطباعة</td>
+                <td class="highlight-dis">لا يقدم فحصاً مادياً لتشوهات الكليشيه أو نظافته قبل الطباعة</td>
             </tr>
             <tr>
-                <td><strong>الاحتكار التشغيلي (OPEX)</strong></td>
-                <td class="highlight-adv">نظام مفتوح، لا يجبرك على شراء سليفات بأسعار خيالية</td>
-                <td class="highlight-dis">يتطلب أحياناً سليفات خاصة مدمجة بشرائح ذكية (مكلفة جداً)</td>
+                <td><strong>الاستدامة للمستقبل (Future-Proof)</strong></td>
+                <td class="highlight-adv">منصة جاهزة للترقية لتقنية (Digital Proofing) بالليزر القادمة في 2027</td>
+                <td class="highlight-dis">أنظمة مغلقة تتطلب استثمارات لتغيير الماكينة بالكامل لمواكبة المستقبل</td>
             </tr>
         </table>
         """, unsafe_allow_html=True)
