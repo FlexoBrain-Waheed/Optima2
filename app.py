@@ -74,6 +74,7 @@ st.markdown(f"""
     .highlight-mid {{ color: #334155; font-weight: 500; background-color: #F1F5F9; }}
     .highlight-dis {{ color: #475569; font-weight: 400; background-color: #FFFFFF; }}
     .total-investment {{ font-size: 1.8rem; font-weight: 900; color: #FFFFFF; text-align: center; background-color: #1E3A8A; padding: 20px; border-radius: 8px; margin-top: 20px; }}
+    .winner-cell {{ font-weight: 900; color: #059669; background-color: #D1FAE5; text-align: center; border: 2px solid #059669 !important; }}
     </style>
 """, unsafe_allow_html=True)
 
@@ -88,7 +89,8 @@ nav_options = {
         "6. Turn-Key Investment", 
         "7. Factory Acceptance & Training",
         "8. S-Mount Automation ROI",
-        "9. IRIS vs smartGPS Tech"
+        "9. IRIS vs smartGPS Tech",
+        "10. Standard Value Battlecard 🏆"
     ],
     "العربية": [
         "1. الملخص التنفيذي", 
@@ -99,7 +101,8 @@ nav_options = {
         "6. استثمار المشروع المتكامل", 
         "7. اختبار المصنع والتدريب",
         "8. العائد الاستثماري للماونتر",
-        "9. تقنية IRIS مقابل smartGPS"
+        "9. تقنية IRIS مقابل smartGPS",
+        "10. المواجهة الشاملة والمواصفات 🏆"
     ]
 }
 
@@ -714,3 +717,202 @@ elif page_selection in ["9. IRIS vs smartGPS Tech", "9. تقنية IRIS مقاب
             color=alt.condition(alt.datum['طريقة الإعداد'] == 'نظام SOMA IRIS / smartGPS', alt.value('#1E3A8A'), alt.value('#94A3B8'))
         ).properties(height=300)
         st.altair_chart(chart_waste, use_container_width=True)
+
+# ==========================================
+# Page 10: The Ultimate Battlecard
+# ==========================================
+elif page_selection in ["10. Standard Value Battlecard 🏆", "10. المواجهة الشاملة والمواصفات 🏆"]:
+    if lang == "English":
+        st.markdown('<div class="executive-title">10. The Ultimate Battlecard: What You Pay For vs. What You Get 🏆</div>', unsafe_allow_html=True)
+        st.markdown("""This matrix illustrates the true value of the base quotation by comparing the standard, out-of-the-box specifications. SOMA provides a fully-loaded flagship press, whereas competitors offer stripped-down machines requiring expensive add-ons.""")
+        
+        st.markdown("""
+        <table class="corp-table">
+            <tr>
+                <th style="width: 15%;">Machine Section</th>
+                <th style="width: 25%;">Critical Specification</th>
+                <th style="width: 15%; text-align: center;">SOMA Optima 2</th>
+                <th style="width: 15%; text-align: center;">BOBST Expert CI</th>
+                <th style="width: 15%; text-align: center;">W&H Alphaflex</th>
+                <th style="width: 15%; text-align: center; background-color: #059669;">The Winner 🏆</th>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F8FAFC;">Core Mechanics & Speed</td>
+                <td><strong>Max Production Speed</strong></td>
+                <td style="text-align: center;">600 m/min</td>
+                <td style="text-align: center;">500 m/min</td>
+                <td style="text-align: center;">500 m/min</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>Frame Wall Thickness</strong></td>
+                <td style="text-align: center;">130 mm (Doubled)</td>
+                <td style="text-align: center;">Standard</td>
+                <td style="text-align: center;">55 - 60 mm</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>Carbon Fiber Mandrels</strong></td>
+                <td style="text-align: center;">Included</td>
+                <td style="text-align: center;">Varies</td>
+                <td style="text-align: center;">Optional Upgrade</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F1F5F9;">Fluid & Thermal Management</td>
+                <td><strong>Drying Tunnel Length</strong></td>
+                <td style="text-align: center;">6 Meters (23 Nozzles)</td>
+                <td style="text-align: center;">5.6 Meters</td>
+                <td style="text-align: center;">5.7 Meters (17 Nozzles)</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>Ink Thermal Stabilization (ITS)</strong></td>
+                <td style="text-align: center;">Included</td>
+                <td style="text-align: center;">Varies</td>
+                <td style="text-align: center;">Not Included</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>Fast Wash Solvent Usage</strong></td>
+                <td style="text-align: center;">5 Liters</td>
+                <td style="text-align: center;">Standard</td>
+                <td style="text-align: center;">12 Liters</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F8FAFC;">Automation & Setup</td>
+                <td><strong>Sleeve Ejection System</strong></td>
+                <td style="text-align: center;">Fully Auto Push-off</td>
+                <td style="text-align: center;">Semi-Auto</td>
+                <td style="text-align: center;">Basic Ejectors</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>100% Inspection Camera</strong></td>
+                <td style="text-align: center;">Included (BST)</td>
+                <td style="text-align: center;">Optional</td>
+                <td style="text-align: center;">Optional</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>ALU/PE Handling Kit</strong></td>
+                <td style="text-align: center;">Included</td>
+                <td style="text-align: center;">Optional</td>
+                <td style="text-align: center;">Not Included</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: middle; font-weight: bold; background-color: #F1F5F9;">Included Peripherals & OPEX</td>
+                <td><strong>Initial Sleeves (8+8)</strong></td>
+                <td style="text-align: center;">Included (Standard)</td>
+                <td style="text-align: center;">Requires Proprietary smartGPS</td>
+                <td style="text-align: center;">Not Included</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>Process Visibility (Glass)</strong></td>
+                <td style="text-align: center;">Full Transparent Glass</td>
+                <td style="text-align: center;">Partial</td>
+                <td style="text-align: center;">Closed (No Glass)</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown('<div class="executive-title">10. المواجهة الشاملة: ما تدفعه مقابل ما تحصل عليه فعلياً 🏆</div>', unsafe_allow_html=True)
+        st.markdown("""توضح هذه المصفوفة القيمة الحقيقية لكل عرض مالي من خلال مقارنة المواصفات الأساسية المشمولة في السعر (Standard Equipment). تقدم SOMA ماكينة (Fully-loaded) جاهزة تماماً للأداء العالي، بينما يقدم المنافسون هياكل مجردة تتطلب ترقيات باهظة.""")
+        
+        st.markdown("""
+        <table class="corp-table">
+            <tr>
+                <th style="width: 15%;">قطاع الماكينة</th>
+                <th style="width: 25%;">المواصفة الحيوية</th>
+                <th style="width: 15%; text-align: center;">SOMA Optima 2</th>
+                <th style="width: 15%; text-align: center;">BOBST Expert CI</th>
+                <th style="width: 15%; text-align: center;">W&H Alphaflex</th>
+                <th style="width: 15%; text-align: center; background-color: #059669;">الشركة الفائزة بالمواصفة 🏆</th>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F8FAFC;">الهيكل والسرعة</td>
+                <td><strong>السرعة الإنتاجية القصوى</strong></td>
+                <td style="text-align: center;">600 متر/دقيقة</td>
+                <td style="text-align: center;">500 متر/دقيقة</td>
+                <td style="text-align: center;">500 متر/دقيقة</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>سماكة جدار الهيكل (Frame)</strong></td>
+                <td style="text-align: center;">130 ملم (مزدوج)</td>
+                <td style="text-align: center;">قياسي</td>
+                <td style="text-align: center;">55 - 60 ملم</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>أعمدة كاربون فايبر للطباعة</strong></td>
+                <td style="text-align: center;">مشمولة</td>
+                <td style="text-align: center;">حسب العرض</td>
+                <td style="text-align: center;">إضافة اختيارية للترقية</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F1F5F9;">إدارة الحرارة والسوائل</td>
+                <td><strong>طول نفق التجفيف</strong></td>
+                <td style="text-align: center;">6 أمتار (23 فوهة)</td>
+                <td style="text-align: center;">5.6 متر</td>
+                <td style="text-align: center;">5.7 متر (17 فوهة)</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>نظام تبريد الحبر (ITS)</strong></td>
+                <td style="text-align: center;">مشمول</td>
+                <td style="text-align: center;">حسب العرض</td>
+                <td style="text-align: center;">غير مشمول</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>هدر المذيبات في الغسيل السريع</strong></td>
+                <td style="text-align: center;">5 لتر فقط</td>
+                <td style="text-align: center;">استهلاك قياسي</td>
+                <td style="text-align: center;">12 لتر (هدر عالي)</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="3" style="vertical-align: middle; font-weight: bold; background-color: #F8FAFC;">الأتمتة والتجهيز</td>
+                <td><strong>نظام إخراج السليفات</strong></td>
+                <td style="text-align: center;">دفع آلي بالكامل (Push-off)</td>
+                <td style="text-align: center;">شبه آلي / قياسي</td>
+                <td style="text-align: center;">طاردات ميكانيكية أساسية</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>كاميرا فحص الجودة 100%</strong></td>
+                <td style="text-align: center;">مشمولة (BST)</td>
+                <td style="text-align: center;">إضافة اختيارية</td>
+                <td style="text-align: center;">إضافة اختيارية</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>تجهيزات طباعة ALU و PE</strong></td>
+                <td style="text-align: center;">مشمولة بالكامل</td>
+                <td style="text-align: center;">إضافة اختيارية</td>
+                <td style="text-align: center;">غير مشمولة</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="vertical-align: middle; font-weight: bold; background-color: #F1F5F9;">الملحقات وبيئة العمل (OPEX)</td>
+                <td><strong>أطقم السليفات المبدئية (8+8)</strong></td>
+                <td style="text-align: center;">مشمولة (سليفات قياسية)</td>
+                <td style="text-align: center;">تتطلب شراء سليفات smartGPS مكلفة</td>
+                <td style="text-align: center;">غير مشمولة</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+            <tr>
+                <td><strong>رؤية وشفافية وحدات الطباعة</strong></td>
+                <td style="text-align: center;">زجاج شفاف بالكامل</td>
+                <td style="text-align: center;">أغطية جزئية</td>
+                <td style="text-align: center;">مغلقة تماماً (انعدام الرؤية)</td>
+                <td class="winner-cell">SOMA</td>
+            </tr>
+        </table>
+        """, unsafe_allow_html=True)
