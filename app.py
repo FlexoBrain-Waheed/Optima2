@@ -304,14 +304,8 @@ elif page_selection in ["3. Operational Efficiency", "3. الكفاءة التش
             <tr>
                 <td><strong>Deep Wash Time / Solvent Used</strong></td>
                 <td class="highlight-adv">10 Minutes / 15 Liters</td>
-                <td class="highlight-mid">Extended Cycle dependent</td>
+                <td class="highlight-mid">10 Minutes / 17 Liters</td>
                 <td class="highlight-dis">4-10 Minutes / 16 Liters</td>
-            </tr>
-            <tr>
-                <td><strong>System Architecture</strong></td>
-                <td class="highlight-adv">Open & Customizable</td>
-                <td class="highlight-mid">Standard Programmed</td>
-                <td class="highlight-dis">Restricted Parameters</td>
             </tr>
         </table>
         """, unsafe_allow_html=True)
@@ -372,14 +366,8 @@ elif page_selection in ["3. Operational Efficiency", "3. الكفاءة التش
             <tr>
                 <td><strong>الغسيل العميق (الوقت / الاستهلاك)</strong></td>
                 <td class="highlight-adv">10 دقائق / 15 لتر</td>
-                <td class="highlight-mid">دورة ممتدة قياسية</td>
+                <td class="highlight-mid">10 دقائق / 17 لتر</td>
                 <td class="highlight-dis">4-10 دقائق / 16 لتر</td>
-            </tr>
-            <tr>
-                <td><strong>هيكلية النظام البرمجية</strong></td>
-                <td class="highlight-adv">مفتوح وقابل للضبط حسب كيمياء الحبر</td>
-                <td class="highlight-mid">مُبرمج قياسياً</td>
-                <td class="highlight-dis">معايير مسبقة الضبط / مقيدة</td>
             </tr>
         </table>
         """, unsafe_allow_html=True)
@@ -770,7 +758,7 @@ elif page_selection in ["10. Standard Value Battlecard 🏆", "10. المواج�
             <tr><td><strong>Max Production Speed</strong></td><td class="highlight-adv" style="text-align: center;">600 m/min</td><td style="text-align: center;">500 m/min</td><td style="text-align: center;">500 m/min</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Print Repeat Range</strong></td><td class="highlight-adv" style="text-align: center;">360 - 850 mm (up to 900)</td><td style="text-align: center;">370 - 800 mm</td><td style="text-align: center;">370 - 800 mm</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Web Tension Range</strong></td><td class="highlight-adv" style="text-align: center;">10 - 400 N (Extended)</td><td style="text-align: center;">20 - 350 N</td><td style="text-align: center;">20 - 350 N</td><td class="winner-cell">SOMA 🏆</td></tr>
-            <tr><td><strong>Machine Frame Material</strong></td><td class="highlight-adv" style="text-align: center;">130 mm Cast-Iron (Doubled)</td><td style="text-align: center;">100 mm</td><td style="text-align: center;">55 - 60 mm Steel</td><td class="winner-cell">SOMA 🏆</td></tr>
+            <tr><td><strong>Machine Frame Material</strong></td><td class="highlight-adv" style="text-align: center;">130 mm Cast-Iron (Doubled)</td><td style="text-align: center;">100 mm Steel</td><td style="text-align: center;">55 - 60 mm Steel</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Lightweight Winding Shafts</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES (Lighted 3" & 6")</td><td style="text-align: center;">❌ Optional</td><td style="text-align: center;">❌ NO</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Carbon Fiber Mandrels</strong></td><td class="highlight-adv" style="text-align: center;">✅ Included</td><td style="text-align: center;">✅ Included</td><td style="text-align: center;">⚠️ Optional Upgrade</td><td class="winner-cell-shared">SOMA & BOBST</td></tr>
             <tr><td><strong>Anilox Base Mandrel Dia.</strong></td><td class="highlight-adv" style="text-align: center;">175.1 mm (Max Stability)</td><td style="text-align: center;">172.0 mm</td><td style="text-align: center;">136.989 mm</td><td class="winner-cell">SOMA 🏆</td></tr>
@@ -788,7 +776,7 @@ elif page_selection in ["10. Standard Value Battlecard 🏆", "10. المواج�
             <tr><td><strong>Heat Exchanger (Ink Cooling)</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES</td><td style="text-align: center;">✅ YES</td><td style="text-align: center;">❌ NO</td><td class="winner-cell-shared">SOMA & BOBST</td></tr>
             <tr><td><strong>Compressed Air Purifying Unit</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES</td><td style="text-align: center;">✅ YES</td><td style="text-align: center;">❌ Optional</td><td class="winner-cell-shared">SOMA & BOBST</td></tr>
             <tr><td><strong>Drying Tunnel Length</strong></td><td class="highlight-adv" style="text-align: center;">6.0 Meters (23 Nozzles)</td><td style="text-align: center;">5.6 Meters</td><td style="text-align: center;">5.7 Meters (17 Nozzles)</td><td class="winner-cell">SOMA 🏆</td></tr>
-            <tr><td><strong>Deep Wash (Time / Solvent)</strong></td><td class="highlight-adv" style="text-align: center;">10 mins / 15 Liters</td><td style="text-align: center;">Extended / Standard</td><td style="text-align: center;">4-10 mins / 16 Liters</td><td class="winner-cell">SOMA 🏆</td></tr>
+            <tr><td><strong>Deep Wash (Time / Solvent)</strong></td><td class="highlight-adv" style="text-align: center;">10 mins / 15 Liters</td><td style="text-align: center;">10 mins / 17 Liters</td><td style="text-align: center;">4-10 mins / 16 Liters</td><td class="winner-cell">SOMA 🏆</td></tr>
         </table>
         """, unsafe_allow_html=True)
 
@@ -796,7 +784,7 @@ elif page_selection in ["10. Standard Value Battlecard 🏆", "10. المواج�
         st.markdown("""
         <table class="corp-table">
             <tr><th style="width: 25%;">Critical Specification</th><th style="width: 25%; text-align: center;">SOMA Optima 2</th><th style="width: 25%; text-align: center;">BOBST Expert CI</th><th style="width: 25%; text-align: center;">W&H Alphaflex</th><th style="width: 15%; text-align: center; background-color: #059669;">The Winner 🏆</th></tr>
-            <tr><td><strong>Prepared for Smart System</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES (Included)</td><td style="text-align: center;">❌ Optional</td><td style="text-align: center;">❌ NO</td><td class="winner-cell">SOMA 🏆</td></tr>
+            <tr><td><strong>Prepared for Smart System (Incl. Price)</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES (Included)</td><td style="text-align: center;">❌ Optional</td><td style="text-align: center;">❌ NO</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Auto Impression & Register</strong></td><td class="highlight-adv" style="text-align: center;">✅ Fully Auto (Falcon/BST)</td><td style="text-align: center;">⚠️ Semi-Auto (Smart-SET)</td><td style="text-align: center;">❌ Manual</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Sleeve Ejection System</strong></td><td class="highlight-adv" style="text-align: center;">✅ Fully Auto Push-off</td><td style="text-align: center;">❌ NO / Semi-Auto</td><td style="text-align: center;">⚠️ Basic Ejectors</td><td class="winner-cell">SOMA 🏆</td></tr>
             <tr><td><strong>Reprint / Insetter Capability</strong></td><td class="highlight-adv" style="text-align: center;">✅ YES</td><td style="text-align: center;">❌ Missing (~10k)</td><td style="text-align: center;">❌ Missing (~10k)</td><td class="winner-cell">SOMA 🏆</td></tr>
@@ -849,7 +837,7 @@ elif page_selection in ["10. Standard Value Battlecard 🏆", "10. المواج�
             <tr><td><strong>مبادل حراري لتبريد الحبر</strong></td><td class="highlight-adv" style="text-align: center;">✅ نعم</td><td style="text-align: center;">✅ نعم</td><td style="text-align: center;">❌ لا</td><td class="winner-cell-shared">SOMA & BOBST</td></tr>
             <tr><td><strong>وحدة تنقية الهواء المضغوط</strong></td><td class="highlight-adv" style="text-align: center;">✅ نعم</td><td style="text-align: center;">✅ نعم</td><td style="text-align: center;">❌ اختياري</td><td class="winner-cell-shared">SOMA & BOBST</td></tr>
             <tr><td><strong>طول نفق التجفيف</strong></td><td class="highlight-adv" style="text-align: center;">6.0 أمتار (23 فوهة)</td><td style="text-align: center;">5.6 متر</td><td style="text-align: center;">5.7 متر (17 فوهة)</td><td class="winner-cell">SOMA 🏆</td></tr>
-            <tr><td><strong>دورة الغسيل العميق (وقت/استهلاك)</strong></td><td class="highlight-adv" style="text-align: center;">10 دقائق / 15 لتر</td><td style="text-align: center;">استهلاك قياسي ممتد</td><td style="text-align: center;">4-10 دقائق / 16 لتر</td><td class="winner-cell">SOMA 🏆</td></tr>
+            <tr><td><strong>دورة الغسيل العميق (وقت/استهلاك)</strong></td><td class="highlight-adv" style="text-align: center;">10 دقائق / 15 لتر</td><td style="text-align: center;">10 دقائق / 17 لتر</td><td style="text-align: center;">4-10 دقائق / 16 لتر</td><td class="winner-cell">SOMA 🏆</td></tr>
         </table>
         """, unsafe_allow_html=True)
 
