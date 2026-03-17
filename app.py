@@ -258,17 +258,17 @@ elif page_selection in ["3. Operational Efficiency", "3. الكفاءة التش
             <tr>
                 <td><strong>Fast Wash Time / Solvent Used</strong></td>
                 <td class="highlight-adv">5 Minutes / 5 Liters</td>
-                <td class="highlight-dis">N/A (Standardized cycle)</td>
+                <td class="highlight-dis">4 Minutes / 12 Liters</td>
             </tr>
             <tr>
                 <td><strong>Normal Wash Time / Solvent Used</strong></td>
                 <td class="highlight-adv">7 Minutes / 10 Liters</td>
-                <td class="highlight-dis">~ 4 Minutes / ~ 12 Liters</td>
+                <td class="highlight-dis">4 Minutes / 14 Liters</td>
             </tr>
             <tr>
                 <td><strong>Deep Wash Time / Solvent Used</strong></td>
                 <td class="highlight-adv">10 Minutes / 15 Liters</td>
-                <td class="highlight-dis">N/A (Standardized cycle)</td>
+                <td class="highlight-dis">4-10 Minutes / 16 Liters</td>
             </tr>
             <tr>
                 <td><strong>System Architecture</strong></td>
@@ -322,17 +322,17 @@ elif page_selection in ["3. Operational Efficiency", "3. الكفاءة التش
             <tr>
                 <td><strong>الغسيل السريع (الوقت / الاستهلاك)</strong></td>
                 <td class="highlight-adv">5 دقائق / 5 لتر</td>
-                <td class="highlight-dis">غير متوفر (دورة ثابتة)</td>
+                <td class="highlight-dis">4 دقائق / 12 لتر</td>
             </tr>
             <tr>
                 <td><strong>الغسيل العادي (الوقت / الاستهلاك)</strong></td>
                 <td class="highlight-adv">7 دقائق / 10 لتر</td>
-                <td class="highlight-dis">~ 4 دقائق / ~ 12 لتر</td>
+                <td class="highlight-dis">4 دقائق / 14 لتر</td>
             </tr>
             <tr>
                 <td><strong>الغسيل العميق (الوقت / الاستهلاك)</strong></td>
                 <td class="highlight-adv">10 دقائق / 15 لتر</td>
-                <td class="highlight-dis">غير متوفر (دورة ثابتة)</td>
+                <td class="highlight-dis">4-10 دقائق / 16 لتر</td>
             </tr>
             <tr>
                 <td><strong>هيكلية النظام</strong></td>
